@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form id="prediction-form",class="form">
+            <div class="form-group">
+                <label for="squareFeet">Total Square Feet:</label>
+                <input type="number" class="area" class="floatLabel" name="Squareft" id="squareFeet" value="1000" placeholder="Enter square feet">
+            </div>
+            
+            <!-- BHK Selection using buttons -->
+            <div class="form-group">
+                <label>BHK:</label>
+                <div class="button-group" id="bhk-group">
+                    <button type="button" class="option-button" id="radio-bhk-1" data-value="1">1 BHK</button>
+                    <button type="button" class="option-button" id="radio-bhk-2" data-value="2">2 BHK</button>
+                    <button type="button" class="option-button" id="radio-bhk-3" data-value="3">3 BHK</button>
+                    <button type="button" class="option-button" id="radio-bhk-4" data-value="4">4 BHK</button>
+                    <button type="button" class="option-button" id="radio-bhk-5" data-value="5">5 BHK</button>
+                </div>
+            </div>
+
+            <!-- Bathroom Selection using buttons -->
+            <div class="form-group">
+                <label>Bathrooms:</label>
+                <div class="button-group" id="bathroom-group">
+                    <button type="button" class="option-button" id="radio-bath-1" data-value="1">1 Bath</button>
+                    <button type="button" class="option-button" id="radio-bath-2" data-value="2">2 Bath</button>
+                    <button type="button" class="option-button" id="radio-bath-3" data-value="3">3 Bath</button>
+                    <button type="button" class="option-button" id="radio-bath-4" data-value="4">4 Bath</button>
+                    <button type="button" class="option-button" id="radio-bath-5" data-value="5">5 Bath</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select class="location"id="uiLocation">
+                    <option value="" disabled selected>Select Location</option>
+                </select>
+            </div>
+
+            <button type="button" class="submit" id="estimateBtn">Estimate Price</button>
+        </form>
+        <div id="output" class="output-box">Estimated Price: <span id="price"></span></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
